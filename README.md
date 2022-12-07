@@ -8,6 +8,7 @@
 [![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/anchore/syft.svg)](https://github.com/anchore/syft)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/anchore/syft/blob/main/LICENSE)
 [![Slack Invite](https://img.shields.io/badge/Slack-Join-blue?logo=slack)](https://anchore.com/slack)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcatejst%2Fsyft.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcatejst%2Fsyft?ref=badge_shield)
 
 A CLI tool and Go library for generating a Software Bill of Materials (SBOM) from container images and filesystems. Exceptional for vulnerability detection when used with a scanner like [Grype](https://github.com/anchore/grype).
 
@@ -651,3 +652,7 @@ The SBOM can be piped to Grype:
 ```bash
 cosign verify-attestation --key $MY_PUBLIC_KEY --type spdxjson docker.io/image:latest | jq '.payload | @base64d | .payload | fromjson | .predicate' | grype
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcatejst%2Fsyft.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcatejst%2Fsyft?ref=badge_large)
